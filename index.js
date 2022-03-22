@@ -4,5 +4,6 @@ window.addEventListener("keydown", function (e) {
 		return;
 	}
 	console.log(audio);
+	audio.currentTime = 0;
 	audio.play();
 });
