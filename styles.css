@@ -1,3 +1,7 @@
+body {
+	background-color: rgb(91, 91, 91);
+}
+
 .keys {
 	display: flex;
 	flex: 1;
@@ -12,10 +16,16 @@
 	margin: 1rem;
 	font-size: 1.5rem;
 	padding: 1rem 0.5rem;
-	transition: all 0.07s ease;
+	transition: all 0.1s ease;
 	width: 10rem;
 	text-align: center;
 	color: black;
-	background-color: rgb(255, 209, 5);
+	background-color: rgba(234, 231, 220, 0.667);
 	text-shadow: 0 0 0.5rem black;
+}
+
+.playing {
+	transform: scale(1.1);
+	border-color: rgb(255, 0, 179);
+	box-shadow: 0 0 0.5rem rgb(255, 0, 195);
 }
