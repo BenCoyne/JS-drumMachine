@@ -2,7 +2,6 @@ body {
 	background-image: linear-gradient(black, black),
 		url("https://images.unsplash.com/photo-1602939444907-6e688c594a66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGRydW18ZW58MHx8MHx8&w=1000&q=80");
 	background-repeat: no-repeat;
-
 	background-size: cover;
 	background-blend-mode: saturation;
 	overflow: hidden;
