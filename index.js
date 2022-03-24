@@ -22,25 +22,25 @@ const jazz = document.querySelector("#jazz");
 const jazzDrums = [
 	"kick",
 	"snare",
-	"brush",
-	"tom1",
-	"tom2",
+	"flam",
 	"closed hat",
 	"open hat",
-	"ride",
+	"ride1",
+	"ride2",
+	"rake",
 	"crash",
 ];
 
 const jazzSounds = [
-	"sounds/jazz.mp3",
-	"sounds/jazz.mp3",
-	"sounds/jazz.mp3",
-	"sounds/jazz.mp3",
-	"sounds/jazz.mp3",
-	"sounds/jazz.mp3",
-	"sounds/jazz.mp3",
-	"sounds/jazz.mp3",
-	"sounds/jazz.mp3",
+	"sounds/jazz/kick.wav",
+	"sounds/jazz/snare.wav",
+	"sounds/jazz/flam.wav",
+	"sounds/jazz/hat.wav",
+	"sounds/jazz/openHat.wav",
+	"sounds/jazz/ride1.wav",
+	"sounds/jazz/ride2.wav",
+	"sounds/jazz/rake.wav",
+	"sounds/jazz/crash.wav",
 ];
 jazz.addEventListener("click", () => {
 	document.body.style.backgroundImage =
@@ -94,10 +94,10 @@ pop.addEventListener("click", () => {
 const hipHop = document.querySelector("#hip-hop");
 const hipHopDrums = [
 	"kick",
-	"clap",
-	"snare",
+	"snare1",
+	"snare2",
 	"tom",
-	"kick 2",
+	"bongo",
 	"clave",
 	"closed hat",
 	"open hat",
