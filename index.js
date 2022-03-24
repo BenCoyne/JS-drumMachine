@@ -105,15 +105,15 @@ const hipHopDrums = [
 ];
 
 const hipHopSounds = [
-	"sounds/kick.wav",
-	"sounds/clap.wav",
-	"sounds/snare.wav",
-	"sounds/tom.wav",
-	"sounds/boom.wav",
-	"sounds/clave.wav",
-	"sounds/hihat.wav",
-	"sounds/openhat.wav",
-	"sounds/ride.wav",
+	"sounds/hipHop/kick.wav",
+	"sounds/hipHop/snare.wav",
+	"sounds/hipHop/snare2.wav",
+	"sounds/hipHop/floorTom.wav",
+	"sounds/hipHop/bongo.wav",
+	"sounds/hipHop/clave.wav",
+	"sounds/hipHop/closedHat.wav",
+	"sounds/hipHop/openHat.wav",
+	"sounds/hipHop/crash.wav",
 ];
 
 hipHop.addEventListener("click", () => {
