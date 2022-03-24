@@ -69,15 +69,15 @@ const popDrums = [
 ];
 
 const popSounds = [
-	"sounds/kick.wav",
-	"sounds/clap.wav",
-	"sounds/snare.wav",
-	"sounds/tom.wav",
-	"sounds/boom.wav",
-	"sounds/clave.wav",
-	"sounds/hihat.wav",
-	"sounds/openhat.wav",
-	"sounds/ride.wav",
+	"sounds/pop/kick.wav",
+	"sounds/pop/clap.wav",
+	"sounds/pop/snare.wav",
+	"sounds/pop/tom.wav",
+	"sounds/pop/boom.wav",
+	"sounds/pop/clave.wav",
+	"sounds/pop/hihat.wav",
+	"sounds/pop/openhat.wav",
+	"sounds/pop/ride.wav",
 ];
 
 pop.addEventListener("click", () => {
