@@ -1,4 +1,4 @@
-const drums = {
+export const drums = {
 	rock: {
 		65: { wav: "kick", name: "kick" },
 		83: { wav: "kick2", name: "kick 2" },
@@ -33,5 +33,3 @@ const drums = {
 		76: { wav: "ride", name: "ride" },
 	},
 };
-
-export default drums;
