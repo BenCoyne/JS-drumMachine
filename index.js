@@ -1,4 +1,4 @@
-import { drums } from "./drumData";
+// import drums from "./drumData";
 
 function playSound(e) {
 	const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
@@ -27,7 +27,6 @@ const hipHop = document.querySelector("#hip-hop");
 jazz.addEventListener("click", () => {
 	document.body.style.backgroundImage =
 		"linear-gradient(black, pink), url('https://cdn.mos.cms.futurecdn.net/378274d88018606e7f61e161f9172126.jpg')";
-
 	drumNames = document.querySelectorAll(".drum");
 	drumSound = document.querySelectorAll(".sound");
 	jazz.style.color = "rgb(255, 0, 179)";
@@ -64,14 +63,11 @@ hipHop.addEventListener("click", () => {
 	hipHop.style.color = "rgb(255, 0, 179)";
 	rock.style.color = "white";
 	jazz.style.color = "white";
-	const drumArray = Object.keys(drums);
-	for (let i = 0; i < drumArray.length; i++) { 
-		
+
+	for (let i = 0; i < drumNames.length; i++) {
+		drumNames[i].textContent = hipHopDrums[i];
+		drumSound[i].attributes[2].nodeValue = hipHopSounds[i];
 	}
-	// for (let i = 0; i < drumNames.length; i++) {
-	// 	drumNames[i].textContent = hipHopDrums[i];
-	// 	drumSound[i].attributes[2].nodeValue = hipHopSounds[i];
-	// }
 });
 
 const jazzDrums = [
