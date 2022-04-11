@@ -1,3 +1,5 @@
+import { drums } from "./drumData";
+
 function playSound(e) {
 	const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
 	const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
@@ -19,6 +21,59 @@ keys.forEach((key) => key.addEventListener("transitionend", removeTransition));
 window.addEventListener("keydown", playSound);
 
 const jazz = document.querySelector("#jazz");
+const rock = document.querySelector("#rock");
+const hipHop = document.querySelector("#hip-hop");
+
+jazz.addEventListener("click", () => {
+	document.body.style.backgroundImage =
+		"linear-gradient(black, pink), url('https://cdn.mos.cms.futurecdn.net/378274d88018606e7f61e161f9172126.jpg')";
+
+	drumNames = document.querySelectorAll(".drum");
+	drumSound = document.querySelectorAll(".sound");
+	jazz.style.color = "rgb(255, 0, 179)";
+	rock.style.color = "white";
+	hipHop.style.color = "white";
+	for (let i = 0; i < drumNames.length; i++) {
+		drumNames[i].textContent = jazzDrums[i];
+		drumSound[i].attributes[2].nodeValue = jazzSounds[i];
+	}
+	document.getElementsByClassName(".playing").style =
+		"border-color: 'rgb(0, 106, 255)'";
+});
+
+rock.addEventListener("click", () => {
+	document.body.style.backgroundImage =
+		'linear-gradient(black, black), url("https://images.unsplash.com/photo-1602939444907-6e688c594a66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGRydW18ZW58MHx8MHx8&w=1000&q=80")';
+	drumNames = document.querySelectorAll(".drum");
+	drumSound = document.querySelectorAll(".sound");
+	rock.style.color = "rgb(255, 0, 179)";
+	jazz.style.color = "white";
+	hipHop.style.color = "white";
+	for (let i = 0; i < drumNames.length; i++) {
+		drumNames[i].textContent = rockDrums[i];
+		drumSound[i].attributes[2].nodeValue = rockSounds[i];
+	}
+});
+
+hipHop.addEventListener("click", () => {
+	console.log(hipHop.style.color);
+	document.body.style.backgroundImage =
+		'linear-gradient(black, grey), url("https://static.roland.com/assets/promos/jpg/billboard_tr-808_story.jpg")';
+	drumNames = document.querySelectorAll(".drum");
+	drumSound = document.querySelectorAll(".sound");
+	hipHop.style.color = "rgb(255, 0, 179)";
+	rock.style.color = "white";
+	jazz.style.color = "white";
+	const drumArray = Object.keys(drums);
+	for (let i = 0; i < drumArray.length; i++) { 
+		
+	}
+	// for (let i = 0; i < drumNames.length; i++) {
+	// 	drumNames[i].textContent = hipHopDrums[i];
+	// 	drumSound[i].attributes[2].nodeValue = hipHopSounds[i];
+	// }
+});
+
 const jazzDrums = [
 	"kick",
 	"snare",
@@ -42,24 +97,7 @@ const jazzSounds = [
 	"sounds/jazz/rake.wav",
 	"sounds/jazz/crash.wav",
 ];
-jazz.addEventListener("click", () => {
-	document.body.style.backgroundImage =
-		"linear-gradient(black, pink), url('https://cdn.mos.cms.futurecdn.net/378274d88018606e7f61e161f9172126.jpg')";
 
-	drumNames = document.querySelectorAll(".drum");
-	drumSound = document.querySelectorAll(".sound");
-	jazz.style.color = "rgb(255, 0, 179)";
-	rock.style.color = "white";
-	hipHop.style.color = "white";
-	for (let i = 0; i < drumNames.length; i++) {
-		drumNames[i].textContent = jazzDrums[i];
-		drumSound[i].attributes[2].nodeValue = jazzSounds[i];
-	}
-	document.getElementsByClassName(".playing").style =
-		"border-color: 'rgb(0, 106, 255)'";
-});
-
-const rock = document.querySelector("#rock");
 const rockDrums = [
 	"kick",
 	"kick 2",
@@ -84,21 +122,6 @@ const rockSounds = [
 	"sounds/rock/ride.wav",
 ];
 
-rock.addEventListener("click", () => {
-	document.body.style.backgroundImage =
-		'linear-gradient(black, black), url("https://images.unsplash.com/photo-1602939444907-6e688c594a66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGRydW18ZW58MHx8MHx8&w=1000&q=80")';
-	drumNames = document.querySelectorAll(".drum");
-	drumSound = document.querySelectorAll(".sound");
-	rock.style.color = "rgb(255, 0, 179)";
-	jazz.style.color = "white";
-	hipHop.style.color = "white";
-	for (let i = 0; i < drumNames.length; i++) {
-		drumNames[i].textContent = rockDrums[i];
-		drumSound[i].attributes[2].nodeValue = rockSounds[i];
-	}
-});
-
-const hipHop = document.querySelector("#hip-hop");
 const hipHopDrums = [
 	"kick",
 	"snare1",
@@ -122,18 +145,3 @@ const hipHopSounds = [
 	"sounds/hipHop/openHat.wav",
 	"sounds/hipHop/crash.wav",
 ];
-
-hipHop.addEventListener("click", () => {
-	console.log(hipHop.style.color);
-	document.body.style.backgroundImage =
-		'linear-gradient(black, grey), url("https://static.roland.com/assets/promos/jpg/billboard_tr-808_story.jpg")';
-	drumNames = document.querySelectorAll(".drum");
-	drumSound = document.querySelectorAll(".sound");
-	hipHop.style.color = "rgb(255, 0, 179)";
-	rock.style.color = "white";
-	jazz.style.color = "white";
-	for (let i = 0; i < drumNames.length; i++) {
-		drumNames[i].textContent = hipHopDrums[i];
-		drumSound[i].attributes[2].nodeValue = hipHopSounds[i];
-	}
-});
